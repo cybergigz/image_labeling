@@ -3,6 +3,5 @@ version: 0.2
 phases:
   build:
     commands:
-      - cd android_studio/RueLaLa
       - ./gradlew clean assembleDevDebug testDevDebugUnitTest
       - ./gradlew crashlyticsUploadDistributionDevDebug

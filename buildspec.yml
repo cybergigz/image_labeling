@@ -1,7 +1,20 @@
 version: 0.2
 
 phases:
+  install:
+    commands:
+      - echo Install started on `date`
+  pre_build:
+    commands:
+      - echo Pre Build started on `date`
   build:
     commands:
-      - ./gradlew clean assembleDevDebug testDevDebugUnitTest
-      - ./gradlew crashlyticsUploadDistributionDevDebug
+      - echo Build started on `date`
+      - ./gradlew --debug --stacktrace build
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - target/aws-code-build-android.jar
+discard-paths: yes

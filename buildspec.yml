@@ -6,7 +6,3 @@ phases:
       - cd android_studio/RueLaLa
       - ./gradlew clean assembleDevDebug testDevDebugUnitTest
       - ./gradlew crashlyticsUploadDistributionDevDebug
-
-artifacts:
-  files:
-- android_studio/RueLaLa/app/build/outputs/apk/dev/debug/app-dev-debug.apk
